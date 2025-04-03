@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .menu-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <label for="socialMedia">Choose a Social Media:</label>
+        <select id="socialMedia">
+            <option value="">--Select--</option>
+            <option value="https://www.facebook.com">Facebook</option>
+            <option value="https://www.twitter.com">Twitter</option>
+            <option value="https://www.instagram.com">Instagram</option>
+            <option value="https://www.linkedin.com">LinkedIn</option>
+        </select>
+        <button onclick="redirectToSocialMedia()">Go</button>
+    </div>
+    
+    <script>
+        function redirectToSocialMedia() {
+            var selectedValue = document.getElementById("socialMedia").value;
+            if (selectedValue) {
+                window.open(selectedValue, "_blank");
+            } else {
+                alert("Please select a social media platform");
+            }
+        }
+    </script>
+</body>
+</html>
